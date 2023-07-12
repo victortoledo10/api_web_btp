@@ -1,0 +1,36 @@
+
+
+#https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864
+
+
+Crear entorno virtual
+python -m venv env   
+
+Activar entorno virtual
+env\Scripts\activate.ps1 
+
+Instalar dependencias
+pip install -r requirements.txt
+
+
+
+Arrancar Servidor
+uvicorn app.main:app --reload --port 8080
+
+
+logarse btp
+cf login --sso
+
+Ver logs
+cf logs main
+
+
+cf logs apppython  --recent
+
+
+cf buildpacks
+
+
+
+
+

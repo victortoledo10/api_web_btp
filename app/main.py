@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -21,6 +22,7 @@ app.include_router(accordion.router)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
+    print("estamos en home")
     data = openfile("home.md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
 
@@ -29,3 +31,5 @@ async def home(request: Request):
 async def show_page(request: Request, page_name: str):
     data = openfile(page_name+".md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
+
+

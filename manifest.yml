@@ -1,0 +1,6 @@
+applications:
+- name: main
+  random-route: true
+  path: ./
+  memory: 128M
+  buildpack: python_buildpack
